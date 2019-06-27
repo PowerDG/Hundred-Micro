@@ -1,0 +1,13 @@
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\bin\Debug\netcoreapp2.2\Api.deps.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\bin\Debug\netcoreapp2.2\Api.runtimeconfig.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\bin\Debug\netcoreapp2.2\Api.runtimeconfig.dev.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\bin\Debug\netcoreapp2.2\Api.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.csproj.CoreCompileInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.RazorAssemblyInfo.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.RazorAssemblyInfo.cs
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.AssemblyInfoInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.AssemblyInfo.cs
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.RazorTargetAssemblyInfo.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\bin\Debug\netcoreapp2.2\Api.pdb
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Api\obj\Debug\netcoreapp2.2\Api.pdb

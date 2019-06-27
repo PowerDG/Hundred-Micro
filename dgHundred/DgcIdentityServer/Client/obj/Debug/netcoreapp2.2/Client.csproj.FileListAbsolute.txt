@@ -1,0 +1,8 @@
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\bin\Debug\netcoreapp2.2\Client.deps.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\bin\Debug\netcoreapp2.2\Client.runtimeconfig.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\bin\Debug\netcoreapp2.2\Client.runtimeconfig.dev.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\bin\Debug\netcoreapp2.2\Client.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\obj\Debug\netcoreapp2.2\Client.csprojAssemblyReference.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\obj\Debug\netcoreapp2.2\Client.csproj.CoreCompileInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\obj\Debug\netcoreapp2.2\Client.AssemblyInfoInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\Client\obj\Debug\netcoreapp2.2\Client.AssemblyInfo.cs

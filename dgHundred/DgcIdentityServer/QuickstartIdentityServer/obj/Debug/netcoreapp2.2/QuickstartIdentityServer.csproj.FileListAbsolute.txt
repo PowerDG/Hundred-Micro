@@ -1,0 +1,14 @@
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\bin\Debug\netcoreapp2.2\QuickstartIdentityServer.deps.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\bin\Debug\netcoreapp2.2\QuickstartIdentityServer.runtimeconfig.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\bin\Debug\netcoreapp2.2\QuickstartIdentityServer.runtimeconfig.dev.json
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\bin\Debug\netcoreapp2.2\QuickstartIdentityServer.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.csprojAssemblyReference.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.csproj.CoreCompileInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.RazorAssemblyInfo.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.RazorAssemblyInfo.cs
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.AssemblyInfoInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.AssemblyInfo.cs
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.RazorTargetAssemblyInfo.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\bin\Debug\netcoreapp2.2\QuickstartIdentityServer.pdb
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\dgHundred\DgcIdentityServer\QuickstartIdentityServer\obj\Debug\netcoreapp2.2\QuickstartIdentityServer.pdb
