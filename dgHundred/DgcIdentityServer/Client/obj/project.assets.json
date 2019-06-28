@@ -787,23 +787,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\PowerDg\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\Client.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\obj\\",
+      "projectPath": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\Client.csproj",
+      "packagesPath": "C:\\Users\\PowerDg\\.nuget\\packages\\",
+      "outputPath": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PowerDg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

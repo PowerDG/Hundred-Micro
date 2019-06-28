@@ -11339,7 +11339,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -12940,23 +12940,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\PowerDg\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\Api.csproj",
+      "projectUniqueName": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\Api.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\obj\\",
+      "projectPath": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\Api.csproj",
+      "packagesPath": "C:\\Users\\PowerDg\\.nuget\\packages\\",
+      "outputPath": "C:\\github.PowerDG\\Hundred-Micro\\dgHundred\\DgcIdentityServer\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PowerDg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
