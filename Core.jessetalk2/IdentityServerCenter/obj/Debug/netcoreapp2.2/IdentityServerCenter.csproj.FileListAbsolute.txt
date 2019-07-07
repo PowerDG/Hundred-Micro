@@ -1,0 +1,14 @@
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\bin\Debug\netcoreapp2.2\IdentityServerCenter.deps.json
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\bin\Debug\netcoreapp2.2\IdentityServerCenter.runtimeconfig.json
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\bin\Debug\netcoreapp2.2\IdentityServerCenter.runtimeconfig.dev.json
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\bin\Debug\netcoreapp2.2\IdentityServerCenter.dll
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.csprojAssemblyReference.cache
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.csproj.CoreCompileInputs.cache
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.RazorAssemblyInfo.cache
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.RazorAssemblyInfo.cs
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.AssemblyInfoInputs.cache
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.AssemblyInfo.cs
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.RazorTargetAssemblyInfo.cache
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\bin\Debug\netcoreapp2.2\IdentityServerCenter.pdb
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.dll
+C:\github.PowerDG\Hundred-Micro\Core.jessetalk2\IdentityServerCenter\obj\Debug\netcoreapp2.2\IdentityServerCenter.pdb
