@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\Camel2mysqlTest\\Camel2mysqlTest.csproj": {}
+  },
+  "projects": {
+    "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\Camel2mysqlTest\\Camel2mysqlTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\Camel2mysqlTest\\Camel2mysqlTest.csproj",
+        "projectName": "Camel2mysqlTest",
+        "projectPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\Camel2mysqlTest\\Camel2mysqlTest.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\Camel2mysqlTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\CamelTo_under_score.csproj": {
+                "projectPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\CamelTo_under_score.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "EPPlus.Core": {
+              "target": "Package",
+              "version": "[1.5.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\CamelTo_under_score.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\CamelTo_under_score.csproj",
+        "projectName": "CamelTo_under_score",
+        "projectPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\CamelTo_under_score.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\github.DGMicro\\Hundred-Micro\\ReNameTools\\CamelTo_under_score_name\\CamelTo_under_score\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

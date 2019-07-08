@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamelTo_under_score", "CamelTo_under_score\CamelTo_under_score.csproj", "{9AFF991C-E212-42EA-87C5-2DF88616F94B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camel2mysqlTest", "Camel2mysqlTest\Camel2mysqlTest.csproj", "{9272ED9E-A7AE-416E-BF54-2D4B8DEE1E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AFF991C-E212-42EA-87C5-2DF88616F94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFF991C-E212-42EA-87C5-2DF88616F94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFF991C-E212-42EA-87C5-2DF88616F94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFF991C-E212-42EA-87C5-2DF88616F94B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9272ED9E-A7AE-416E-BF54-2D4B8DEE1E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9272ED9E-A7AE-416E-BF54-2D4B8DEE1E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9272ED9E-A7AE-416E-BF54-2D4B8DEE1E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9272ED9E-A7AE-416E-BF54-2D4B8DEE1E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1770F7FB-0D94-4D43-858F-F54A735FF6F2}
+	EndGlobalSection
+EndGlobal

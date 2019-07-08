@@ -1,0 +1,14 @@
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\Camel2mysqlTest.deps.json
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\Camel2mysqlTest.runtimeconfig.json
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\Camel2mysqlTest.runtimeconfig.dev.json
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\Camel2mysqlTest.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\Camel2mysqlTest.pdb
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\CamelTo_under_score.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\bin\Debug\netcoreapp2.2\CamelTo_under_score.pdb
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.csprojAssemblyReference.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.csproj.CoreCompileInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.AssemblyInfoInputs.cache
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.AssemblyInfo.cs
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.csproj.CopyComplete
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.dll
+C:\GitHub\github.DGMicro\Hundred-Micro\ReNameTools\CamelTo_under_score_name\Camel2mysqlTest\obj\Debug\netcoreapp2.2\Camel2mysqlTest.pdb
