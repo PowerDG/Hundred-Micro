@@ -28,17 +28,35 @@ namespace Research.PropertyInfoes
 
         #region Migrations
 
-        public static string GetColumnFirstName(string m_propertyFullName)
+        public static string GetColumnFirstName(string propertyFullName)
         {
-            if (m_propertyFullName.Contains("class"))
+            String[] parts;
+
+            if (propertyFullName.Contains(" columns: new[] {"))
             {
-                return m_propertyFullName;
+                var result = " columns: new[] {";
+                 parts = propertyFullName.TrimStart().Split('"');
+                for (int i = 1; i < parts.Length; i+=2)
+                {
+                    result = '"' + GetSqlColumnRename(parts[i]) + '"';
+                }
+                result += " });";
+                return result;
             }
-            String[] parts = m_propertyFullName.TrimStart().Split(" ");
-            if ((string.IsNullOrWhiteSpace(m_propertyFullName) ||
+            if (propertyFullName.Contains(" column: x => x"))
+            {
+                parts = propertyFullName.TrimStart().Split("x => x.");
+                return parts[0]+ "x => x."+ parts[1]+ ",";
+            }
+            if (propertyFullName.Contains("class"))
+            {
+                return propertyFullName;
+            }
+             parts = propertyFullName.TrimStart().Split(" ");
+            if ((string.IsNullOrWhiteSpace(propertyFullName) ||
                 parts.Length < 3))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
             else if (parts[1].Equals("="))
             {
@@ -47,26 +65,55 @@ namespace Research.PropertyInfoes
             }
             else
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
         }
-        public static string ReplaceMigrator(string m_migratorName, string m_columnName)
+        public static string ReplaceMigrator(string migratorName, string  columnName)
         {
-            if (m_migratorName.Contains("class"))
+            if (migratorName.Contains("class"))
             {
-                return m_migratorName;
+                return migratorName;
             }
-            String[] parts = m_migratorName.TrimStart().Split(" ");
-            if (IsMigratorCodeLine(m_migratorName))
+            String[] parts = migratorName.TrimStart().Split(" ");
+            if ((string.IsNullOrWhiteSpace(migratorName) ||
+                parts.Length < 3))
             {
-                return m_migratorName;
+                return migratorName;
             }
-            var m_newMigratorName = m_columnName;
+            else if (parts[1].Equals("="))
+            {
+                var newMigratorRename = GetSqlColumnRename(parts[0]);
+
+                for (int i = 1; i < parts.Length; i++)
+                {
+                    newMigratorRename += " " + parts[i];
+                }
+                return newMigratorRename;
+
+            }
+            else
+            {
+                return migratorName;
+            }
+        }
+
+        public static string ReplaceMigrator2(string migratorName, string  columnName)
+        {
+            if (migratorName.Contains("class"))
+            {
+                return migratorName;
+            }
+            String[] parts = migratorName.TrimStart().Split(" ");
+            if (IsMigratorCodeLine(migratorName))
+            {
+                return migratorName;
+            }
+            var  newMigratorName =  columnName;
             for (int i = 1; i < parts.Length; i++)
             {
-                m_newMigratorName += " " + parts[i];
+                 newMigratorName += " " + parts[i];
             }
-            return m_newMigratorName;
+            return  newMigratorName;
         }
 
         #endregion
@@ -74,16 +121,16 @@ namespace Research.PropertyInfoes
 
         #region Property
          
-        public static string GetPropertyName(string m_propertyFullName)
+        public static string GetPropertyName(string propertyFullName)
         {
-            if (m_propertyFullName.Contains("class"))
+            if (propertyFullName.Contains("class"))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
-            String[] parts = m_propertyFullName.Split(" ");
-            if (!IsPropertyName(m_propertyFullName))
+            String[] parts = propertyFullName.Split(" ");
+            if (!IsPropertyName(propertyFullName))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
             return parts[2];
         }
@@ -91,50 +138,50 @@ namespace Research.PropertyInfoes
         /// <summary>
         /// override or new 之前的虚属性
         /// </summary>
-        /// <param name="m_propertyFullName"></param>
+        /// <param name="propertyFullName"></param>
         /// <returns></returns>
-        public static string ReNewPropertyName(string m_propertyFullName)
+        public static string ReNewPropertyName(string propertyFullName)
         {
-            if (m_propertyFullName.Contains("class"))
+            if (propertyFullName.Contains("class"))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
-            String[] parts = m_propertyFullName.Split(" ");
-            if (!IsPropertyName(m_propertyFullName))
+            String[] parts = propertyFullName.Split(" ");
+            if (!IsPropertyName(propertyFullName))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
-            var m_newPropertyName = parts[0] + " new ";
+            var  newPropertyName = parts[0] + " new ";
             for (int i = 1; i < parts.Length; i++)
             {
-                m_newPropertyName += " " + parts[i];
+                 newPropertyName += " " + parts[i];
             }
-            return m_newPropertyName;
+            return  newPropertyName;
         } 
 
         /// <summary>
         /// 属性名上注解  添加sql的Entity关系映射
         /// </summary>
-        /// <param name="m_propertyFullName"></param>
-        /// <param name="m_column_name"></param>
+        /// <param name="propertyFullName"></param>
+        /// <param name=" column_name"></param>
         /// <param name="isZeroModule"></param>
         /// <returns></returns>
-        public static string GetPropertyNameWithColumn(string m_propertyFullName, string m_column_name, byte isZeroModule)
+        public static string GetPropertyNameWithColumn(string propertyFullName, string  column_name, byte isZeroModule)
         {
-            if (m_propertyFullName.Contains("class"))
+            if (propertyFullName.Contains("class"))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
-            String[] parts = m_propertyFullName.Split(" ");
-            if (!IsPropertyName(m_propertyFullName))
+            String[] parts = propertyFullName.Split(" ");
+            if (!IsPropertyName(propertyFullName))
             {
-                return m_propertyFullName;
+                return propertyFullName;
             }
             if (isZeroModule == 1)
             {
-                return "[Column(\"" + m_column_name + "\")]" + "\n" + ReNewPropertyName(m_propertyFullName);
+                return "[Column(\"" +  column_name + "\")]" + "\n" + ReNewPropertyName(propertyFullName);
             }
-            return "[Column(\"" + m_column_name + "\")]" + "\n" + m_propertyFullName;
+            return "[Column(\"" +  column_name + "\")]" + "\n" + propertyFullName;
         }
 
         #endregion
@@ -163,17 +210,17 @@ namespace Research.PropertyInfoes
         {
              
             StringBuilder result = new StringBuilder();
-            char[] m_list = name.ToCharArray();
-            if (name != null && m_list.Length > 0)
+            char[]  list = name.ToCharArray();
+            if (name != null &&  list.Length > 0)
             {  // 将第一个字符处理成小写
                 result.Append(name.Substring(0, 1).ToLowerInvariant());
                 for (int i = 1; i < name.Length; i++)
                 {
-                    if (m_list[i].ToString().Equals(m_list[i].ToString().ToUpperInvariant()))
+                    if ( list[i].ToString().Equals( list[i].ToString().ToUpperInvariant()))
                     { // 在大写字母前添加下划线
                         result.Append("_");
                     } // 其他字符直接转成小写
-                    result.Append(m_list[i].ToString().ToLowerInvariant());
+                    result.Append( list[i].ToString().ToLowerInvariant());
                 }
             }
             return result.ToString();
@@ -185,17 +232,17 @@ namespace Research.PropertyInfoes
         #region Generator-forsaken
 
 
-        //private static string GetColumnFirstName(string m_propertyFullName)
+        //private static string GetColumnFirstName(string propertyFullName)
         //{
-        //    if (m_propertyFullName.Contains("class"))
+        //    if (propertyFullName.Contains("class"))
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
-        //    String[] parts = m_propertyFullName.TrimStart().Split(" ");
-        //    if ((string.IsNullOrWhiteSpace(m_propertyFullName) ||
+        //    String[] parts = propertyFullName.TrimStart().Split(" ");
+        //    if ((string.IsNullOrWhiteSpace(propertyFullName) ||
         //        parts.Length < 3) )
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
         //    else if (parts[1].Equals("="))
         //    {
@@ -204,76 +251,76 @@ namespace Research.PropertyInfoes
         //    }
         //    else
         //    { 
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
         //}
-        //private static string ReplaceMigrator(string m_migratorName, string m_columnName)
+        //private static string ReplaceMigrator(string migratorName, string  columnName)
         //{
-        //    if (m_migratorName.Contains("class"))
+        //    if (migratorName.Contains("class"))
         //    {
-        //        return m_migratorName;
+        //        return migratorName;
         //    }
-        //    String[] parts = m_migratorName.TrimStart().Split(" ");
-        //    if (string.IsNullOrWhiteSpace(m_migratorName) ||
+        //    String[] parts = migratorName.TrimStart().Split(" ");
+        //    if (string.IsNullOrWhiteSpace(migratorName) ||
         //        parts.Length < 3 || !parts[1].Equals("="))
         //    {
-        //        return m_migratorName;
+        //        return migratorName;
         //    }
-        //    var m_newMigratorName = m_columnName;
+        //    var  newMigratorName =  columnName;
         //    for (int i = 1; i < parts.Length; i++)
         //    {
-        //        m_newMigratorName += " " + parts[i];
+        //         newMigratorName += " " + parts[i];
         //    }
-        //    return m_newMigratorName;
+        //    return  newMigratorName;
         //}
 
-        //private static string GetPropertyName(string m_propertyFullName)
+        //private static string GetPropertyName(string propertyFullName)
         //{
-        //    if (m_propertyFullName.Contains("class"))
+        //    if (propertyFullName.Contains("class"))
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
-        //    String[] parts = m_propertyFullName.Split(" ");
-        //    if (string.IsNullOrWhiteSpace(m_propertyFullName)||parts.Length<3)
+        //    String[] parts = propertyFullName.Split(" ");
+        //    if (string.IsNullOrWhiteSpace(propertyFullName)||parts.Length<3)
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
         //    return parts[2];
         //}
-        //private static string ReNewPropertyName(string m_propertyFullName)
+        //private static string ReNewPropertyName(string propertyFullName)
         //{
-        //    if (m_propertyFullName.Contains("class"))
+        //    if (propertyFullName.Contains("class"))
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
-        //    String[] parts = m_propertyFullName.Split(" ");
-        //    if (string.IsNullOrWhiteSpace(m_propertyFullName)||parts.Length < 3)
+        //    String[] parts = propertyFullName.Split(" ");
+        //    if (string.IsNullOrWhiteSpace(propertyFullName)||parts.Length < 3)
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
-        //    var m_newPropertyName = parts[0]+" new ";
+        //    var  newPropertyName = parts[0]+" new ";
         //    for (int i = 1; i < parts.Length; i++)
         //    {
-        //        m_newPropertyName += " "+parts[i];
+        //         newPropertyName += " "+parts[i];
         //    }
-        //    return m_newPropertyName;
+        //    return  newPropertyName;
         //}
-        //public static string GetPropertyNameWithColumn(string m_propertyFullName, string m_column_name,byte isZeroModule)
+        //public static string GetPropertyNameWithColumn(string propertyFullName, string  column_name,byte isZeroModule)
         //{ 
-        //    if (m_propertyFullName.Contains("class"))
+        //    if (propertyFullName.Contains("class"))
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
-        //    String[] parts = m_propertyFullName.Split(" ");
-        //    if (string.IsNullOrWhiteSpace(m_propertyFullName)||parts.Length < 3)
+        //    String[] parts = propertyFullName.Split(" ");
+        //    if (string.IsNullOrWhiteSpace(propertyFullName)||parts.Length < 3)
         //    {
-        //        return m_propertyFullName;
+        //        return propertyFullName;
         //    }
         //    if (isZeroModule==1)
         //    { 
-        //        return "[Column(\"" + m_column_name + "\")]" + "\n" + ReNewPropertyName(m_propertyFullName);
+        //        return "[Column(\"" +  column_name + "\")]" + "\n" + ReNewPropertyName(propertyFullName);
         //    }
-        //    return "[Column(\"" + m_column_name + "\")]" + "\n" + m_propertyFullName; 
+        //    return "[Column(\"" +  column_name + "\")]" + "\n" + propertyFullName; 
         //}
 
         //public static string UnderscoreName(string name)
@@ -291,17 +338,17 @@ namespace Research.PropertyInfoes
         //        return "deleted_time";
         //    }
         //    StringBuilder result = new StringBuilder();
-        //    char[] m_list = name.ToCharArray();
-        //    if (name != null && m_list.Length > 0)
+        //    char[]  list = name.ToCharArray();
+        //    if (name != null &&  list.Length > 0)
         //    {  // 将第一个字符处理成小写
         //        result.Append(name.Substring(0, 1).ToLowerInvariant()); 
         //        for (int i = 1; i < name.Length; i++)
         //        {
-        //            if (m_list[i].ToString().Equals(m_list[i].ToString().ToUpperInvariant())  )
+        //            if ( list[i].ToString().Equals( list[i].ToString().ToUpperInvariant())  )
         //            { // 在大写字母前添加下划线
         //                result.Append("_");
         //            } // 其他字符直接转成小写
-        //            result.Append(m_list[i].ToString().ToLowerInvariant());
+        //            result.Append( list[i].ToString().ToLowerInvariant());
         //        }
         //    }
         //    return result.ToString(); 
