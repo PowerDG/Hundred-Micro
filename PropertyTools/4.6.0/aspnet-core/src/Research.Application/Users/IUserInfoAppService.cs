@@ -6,7 +6,7 @@ using Research.Users.Dto;
 
 namespace Research.Users
 {
-    public interface IUserAppService : IAsyncCrudAppService<UserDto, long, PagedUserResultRequestDto, CreateUserDto, UserDto>
+    public interface IUserInfoAppService : IAsyncCrudAppService<UserDto, long, PagedUserResultRequestDto, CreateUserDto, UserDto>
     {
         Task<ListResultDto<RoleDto>> GetRoles();
 

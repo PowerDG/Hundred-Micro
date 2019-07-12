@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Research.PropertyInfoes
 {
@@ -58,21 +59,25 @@ namespace Research.PropertyInfoes
                 return migratorName;
             }
             String[] parts;
-            if (migratorName.Contains(" columns: new[] {"))
+            if (migratorName.Contains("columns: new[] {"))
             {//migrationBuilder.CreateIndex
-                var result = " columns: new[] {";
+                var result = "columns: new[] {";
                 parts = migratorName.TrimStart().Split('"');
+                result = migratorName;
                 for (int i = 1; i < parts.Length; i += 2)
-                {
-                    result = '"' + GetSqlColumnRename(parts[i]) + '"';
+                { 
+                    result=result.Replace(parts[i], GetSqlColumnRename(parts[1]));
+                    //result = new Regex(result)
+                    //    .Replace(parts[i], GetSqlColumnRename(parts[1]),1);
+                    //result = '"' + GetSqlColumnRename(parts[i]) + '"';
                 }
-                result += " });";
+                //result += " });";
                 return result;
             }
-            if (migratorName.Contains(" column: x => x"))
+            if (migratorName.Contains("column: x => x."))
             {//table.PrimaryKey
-                parts = migratorName.TrimStart().Split("x => x.");
-                return parts[0] + "x => x." + parts[1] + ",";
+                parts = migratorName.TrimStart().Split('.',',' );
+                return parts[0] + "." + GetSqlColumnRename(parts[1]) + ",";
             }
             parts = migratorName.TrimStart().Split(" ");
             if ((string.IsNullOrWhiteSpace(migratorName) ||

@@ -11,6 +11,9 @@
     <RootNamespace>Research</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Users\IUserInfoAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Research.Core\Research.Core.csproj" />
   </ItemGroup>
 </Project>
