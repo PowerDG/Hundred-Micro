@@ -30,24 +30,7 @@ namespace Research.PropertyInfoes
 
         public static string GetColumnFirstName(string propertyFullName)
         {
-            String[] parts;
-
-            if (propertyFullName.Contains(" columns: new[] {"))
-            {
-                var result = " columns: new[] {";
-                 parts = propertyFullName.TrimStart().Split('"');
-                for (int i = 1; i < parts.Length; i+=2)
-                {
-                    result = '"' + GetSqlColumnRename(parts[i]) + '"';
-                }
-                result += " });";
-                return result;
-            }
-            if (propertyFullName.Contains(" column: x => x"))
-            {
-                parts = propertyFullName.TrimStart().Split("x => x.");
-                return parts[0]+ "x => x."+ parts[1]+ ",";
-            }
+            String[] parts; 
             if (propertyFullName.Contains("class"))
             {
                 return propertyFullName;
@@ -74,7 +57,24 @@ namespace Research.PropertyInfoes
             {
                 return migratorName;
             }
-            String[] parts = migratorName.TrimStart().Split(" ");
+            String[] parts;
+            if (migratorName.Contains(" columns: new[] {"))
+            {//migrationBuilder.CreateIndex
+                var result = " columns: new[] {";
+                parts = migratorName.TrimStart().Split('"');
+                for (int i = 1; i < parts.Length; i += 2)
+                {
+                    result = '"' + GetSqlColumnRename(parts[i]) + '"';
+                }
+                result += " });";
+                return result;
+            }
+            if (migratorName.Contains(" column: x => x"))
+            {//table.PrimaryKey
+                parts = migratorName.TrimStart().Split("x => x.");
+                return parts[0] + "x => x." + parts[1] + ",";
+            }
+            parts = migratorName.TrimStart().Split(" ");
             if ((string.IsNullOrWhiteSpace(migratorName) ||
                 parts.Length < 3))
             {
