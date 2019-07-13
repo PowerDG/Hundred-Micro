@@ -29,27 +29,42 @@ namespace Research.PropertyInfoes
 
         #region Migrations
 
-        public static string GetColumnFirstName(string propertyFullName)
+
+        public static string BuilderColumnName(string columnName, string propertyName, string tableName)
+        {
+            var modelWithColumn = $" modelBuilder.Entity<{ tableName}>()" +
+                $".Property(t => t.{propertyName})" +
+                $" .HasColumnName(\"{columnName}\");";
+            return modelWithColumn;
+        }
+
+            public static ValueTuple<string,string,string,bool> GetColumnFirstName(string propertyFullName,string tableName)
         {
             String[] parts; 
             if (propertyFullName.Contains("class"))
             {
-                return propertyFullName;
+                return (propertyFullName, "", tableName, false);
+            }
+            if (propertyFullName.Contains("name: \"Abp"))
+            {
+                parts = propertyFullName.Split("Abp");
+                tableName = parts[1].Substring(0,parts[1].Length-3);
+                return (propertyFullName, "", tableName, false);
             }
              parts = propertyFullName.TrimStart().Split(" ");
             if ((string.IsNullOrWhiteSpace(propertyFullName) ||
                 parts.Length < 3))
             {
-                return propertyFullName;
+                return (propertyFullName, "", tableName, false);
             }
             else if (parts[1].Equals("="))
             {
 
-                return GetSqlColumnRename(parts[0]);
+                return (GetSqlColumnRename(parts[0]), parts[0],tableName,true);
             }
             else
             {
-                return propertyFullName;
+                return (propertyFullName, "", tableName,false);
             }
         }
         public static string ReplaceMigrator(string migratorName, string  columnName)
@@ -59,17 +74,22 @@ namespace Research.PropertyInfoes
                 return migratorName;
             }
             String[] parts;
-            if (migratorName.Contains("columns: new[] {"))
-            {//migrationBuilder.CreateIndex
-                var result = "columns: new[] {";
+            if (migratorName.Contains("column:")&& migratorName.Contains(");"))
+            {
+                 
                 parts = migratorName.TrimStart().Split('"');
-                result = migratorName;
+
+                var result = migratorName;
+                    result = result.Replace(parts[1], GetSqlColumnRename(parts[1]));
+                return result;
+                }
+            if (migratorName.Contains("columns: new[] {"))
+            {//migrationBuilder.CreateIndex 
+                parts = migratorName.TrimStart().Split('"');
+                var result = migratorName;
                 for (int i = 1; i < parts.Length; i += 2)
                 { 
-                    result=result.Replace(parts[i], GetSqlColumnRename(parts[1]));
-                    //result = new Regex(result)
-                    //    .Replace(parts[i], GetSqlColumnRename(parts[1]),1);
-                    //result = '"' + GetSqlColumnRename(parts[i]) + '"';
+                    result=result.Replace(parts[i], GetSqlColumnRename(parts[i]));
                 }
                 //result += " });";
                 return result;
