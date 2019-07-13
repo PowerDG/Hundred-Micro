@@ -90,28 +90,41 @@ namespace Research.PropertyInfoes
         /// form    C#大驼峰属性名    to  mysql下划线列名
         /// </summary>
         /// <returns></returns>
-        public async Task<PagedResultDto<PropertyInfoListDto>> MigratorReName()
-        {
+        //public async Task<PagedResultDto<PropertyInfoListDto>> MigratorReName()
 
-            var query = _entityRepository.GetAll();
-            var entityList = await query
-              .ToListAsync();
+        public async Task<int> MigratorReName() 
+            {
+
+            var entityTableName = "";
+            var propertyName ="";
+            bool isPropertyRow;
+            var query = _entityRepository.GetAll().OrderBy(x => x.Id);//.OrderByDescending(x=>x.Id);
+            var entityList =   query  .ToList();
             // TODO:根据传入的参数添加过滤条件
             foreach (var item in entityList)
             {
                 var _entity = _entityRepository.FirstOrDefault(t => t.Id == item.Id); 
                 if (!string.IsNullOrWhiteSpace(_entity.ColumnFullName))
-                {
-                    _entity.ColumnName = NamingConventions.GetColumnFirstName(_entity.ColumnFullName);
+                { 
+                    (_entity.ColumnName, propertyName, entityTableName, isPropertyRow) = NamingConventions
+                        .GetColumnFirstName(_entity.ColumnFullName, entityTableName ?? "");
+                    var columnName = _entity.ColumnName;
+                    if (isPropertyRow)
+                    {
+                        _entity.Scope = NamingConventions.BuilderColumnName(columnName, propertyName, entityTableName); 
+                    }
                     //暂用DomainName存放新迁移FluentAPI
-                    _entity.DomainName = NamingConventions.ReplaceMigrator(_entity.ColumnFullName, _entity.ColumnName);
+                    //_entity.DomainName = NamingConventions.ReplaceMigrator(_entity.ColumnFullName, _entity.ColumnName);
+
                 } 
                 _entityRepository.Update(_entity);
             }
             var count = await query.CountAsync();
-            var entityListDtos = ObjectMapper.Map<List<PropertyInfoListDto>>(entityList);
+            //var entityListDtos = ObjectMapper.Map<List<PropertyInfoListDto>>(entityList);
             await CurrentUnitOfWork.SaveChangesAsync();
-            return new PagedResultDto<PropertyInfoListDto>(count, entityListDtos);
+            //return new PagedResultDto<PropertyInfoListDto>(count, entityListDtos);
+            return count;
+
         }
 
 
