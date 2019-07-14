@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Research.EntityFrameworkCore;
 
 namespace Research.Migrations
 {
     [DbContext(typeof(ResearchDbContext))]
-    partial class ResearchDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190713041709_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,38 +22,28 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Application.Editions.Edition", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasColumnName("display_name")
                         .HasMaxLength(64);
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(32);
 
                     b.HasKey("Id");
@@ -62,29 +54,23 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Application.Features.FeatureSetting", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("Discriminator")
                         .IsRequired();
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(128);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.Property<string>("Value")
                         .IsRequired()
-                        .HasColumnName("value")
                         .HasMaxLength(2000);
 
                     b.HasKey("Id");
@@ -97,61 +83,45 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Auditing.AuditLog", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("BrowserInfo")
-                        .HasColumnName("browser_info")
                         .HasMaxLength(512);
 
                     b.Property<string>("ClientIpAddress")
-                        .HasColumnName("client_ip_address")
                         .HasMaxLength(64);
 
                     b.Property<string>("ClientName")
-                        .HasColumnName("client_name")
                         .HasMaxLength(128);
 
                     b.Property<string>("CustomData")
-                        .HasColumnName("custom_data")
                         .HasMaxLength(2000);
 
                     b.Property<string>("Exception")
-                        .HasColumnName("exception")
                         .HasMaxLength(2000);
 
-                    b.Property<int>("ExecutionDuration")
-                        .HasColumnName("execution_duration");
+                    b.Property<int>("ExecutionDuration");
 
-                    b.Property<DateTime>("ExecutionTime")
-                        .HasColumnName("execution_time");
+                    b.Property<DateTime>("ExecutionTime");
 
-                    b.Property<int?>("ImpersonatorTenantId")
-                        .HasColumnName("impersonator_tenant_id");
+                    b.Property<int?>("ImpersonatorTenantId");
 
-                    b.Property<long?>("ImpersonatorUserId")
-                        .HasColumnName("impersonator_user_id");
+                    b.Property<long?>("ImpersonatorUserId");
 
                     b.Property<string>("MethodName")
-                        .HasColumnName("method_name")
                         .HasMaxLength(256);
 
                     b.Property<string>("Parameters")
-                        .HasColumnName("parameters")
                         .HasMaxLength(1024);
 
-                    b.Property<string>("ReturnValue")
-                        .HasColumnName("return_value");
+                    b.Property<string>("ReturnValue");
 
                     b.Property<string>("ServiceName")
-                        .HasColumnName("service_name")
                         .HasMaxLength(256);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long?>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long?>("UserId");
 
                     b.HasKey("Id");
 
@@ -167,28 +137,22 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.PermissionSetting", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("Discriminator")
                         .IsRequired();
 
-                    b.Property<bool>("IsGranted")
-                        .HasColumnName("is_granted");
+                    b.Property<bool>("IsGranted");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(128);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -202,27 +166,20 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Roles.RoleClaim", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ClaimType")
-                        .HasColumnName("claim_type")
                         .HasMaxLength(256);
 
-                    b.Property<string>("ClaimValue")
-                        .HasColumnName("claim_value");
+                    b.Property<string>("ClaimValue");
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnName("role_id");
+                    b.Property<int>("RoleId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -236,45 +193,32 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserAccount", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("EmailAddress")
-                        .HasColumnName("email_address")
                         .HasMaxLength(256);
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
-                    b.Property<long?>("UserLinkId")
-                        .HasColumnName("user_link_id");
+                    b.Property<long?>("UserLinkId");
 
                     b.Property<string>("UserName")
-                        .HasColumnName("user_name")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
@@ -295,27 +239,20 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserClaim", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ClaimType")
-                        .HasColumnName("claim_type")
                         .HasMaxLength(256);
 
-                    b.Property<string>("ClaimValue")
-                        .HasColumnName("claim_value");
+                    b.Property<string>("ClaimValue");
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -329,24 +266,19 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserLogin", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("LoginProvider")
                         .IsRequired()
-                        .HasColumnName("login_provider")
                         .HasMaxLength(128);
 
                     b.Property<string>("ProviderKey")
                         .IsRequired()
-                        .HasColumnName("provider_key")
                         .HasMaxLength(256);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -362,39 +294,29 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserLoginAttempt", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("BrowserInfo")
-                        .HasColumnName("browser_info")
                         .HasMaxLength(512);
 
                     b.Property<string>("ClientIpAddress")
-                        .HasColumnName("client_ip_address")
                         .HasMaxLength(64);
 
                     b.Property<string>("ClientName")
-                        .HasColumnName("client_name")
                         .HasMaxLength(128);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<byte>("Result")
-                        .HasColumnName("result");
+                    b.Property<byte>("Result");
 
                     b.Property<string>("TenancyName")
-                        .HasColumnName("tenancy_name")
                         .HasMaxLength(64);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long?>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long?>("UserId");
 
                     b.Property<string>("UserNameOrEmailAddress")
-                        .HasColumnName("user_name_or_email_address")
                         .HasMaxLength(255);
 
                     b.HasKey("Id");
@@ -409,26 +331,19 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserOrganizationUnit", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<long>("OrganizationUnitId")
-                        .HasColumnName("organization_unit_id");
+                    b.Property<long>("OrganizationUnitId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -451,14 +366,11 @@ namespace Research.Migrations
                     b.Property<long?>("CreatorUserId")
                         .HasColumnName("creator_user_id");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnName("role_id");
+                    b.Property<int>("RoleId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -474,28 +386,21 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Authorization.Users.UserToken", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime?>("ExpireDate")
-                        .HasColumnName("expire_date");
+                    b.Property<DateTime?>("ExpireDate");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnName("login_provider")
                         .HasMaxLength(128);
 
                     b.Property<string>("Name")
-                        .HasColumnName("name")
                         .HasMaxLength(128);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.Property<string>("Value")
-                        .HasColumnName("value")
                         .HasMaxLength(512);
 
                     b.HasKey("Id");
@@ -510,39 +415,29 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.BackgroundJobs.BackgroundJobInfo", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<bool>("IsAbandoned")
-                        .HasColumnName("is_abandoned");
+                    b.Property<bool>("IsAbandoned");
 
                     b.Property<string>("JobArgs")
                         .IsRequired()
-                        .HasColumnName("job_args")
                         .HasMaxLength(1048576);
 
                     b.Property<string>("JobType")
                         .IsRequired()
-                        .HasColumnName("job_type")
                         .HasMaxLength(512);
 
-                    b.Property<DateTime?>("LastTryTime")
-                        .HasColumnName("last_try_time");
+                    b.Property<DateTime?>("LastTryTime");
 
-                    b.Property<DateTime>("NextTryTime")
-                        .HasColumnName("next_try_time");
+                    b.Property<DateTime>("NextTryTime");
 
-                    b.Property<byte>("Priority")
-                        .HasColumnName("priority");
+                    b.Property<byte>("Priority");
 
-                    b.Property<short>("TryCount")
-                        .HasColumnName("try_count");
+                    b.Property<short>("TryCount");
 
                     b.HasKey("Id");
 
@@ -554,34 +449,25 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Configuration.Setting", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(256);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long?>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long?>("UserId");
 
                     b.Property<string>("Value")
-                        .HasColumnName("value")
                         .HasMaxLength(2000);
 
                     b.HasKey("Id");
@@ -596,28 +482,21 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.EntityHistory.EntityChange", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("ChangeTime")
-                        .HasColumnName("change_time");
+                    b.Property<DateTime>("ChangeTime");
 
-                    b.Property<byte>("ChangeType")
-                        .HasColumnName("change_type");
+                    b.Property<byte>("ChangeType");
 
-                    b.Property<long>("EntityChangeSetId")
-                        .HasColumnName("entity_change_set_id");
+                    b.Property<long>("EntityChangeSetId");
 
                     b.Property<string>("EntityId")
-                        .HasColumnName("entity_id")
                         .HasMaxLength(48);
 
                     b.Property<string>("EntityTypeFullName")
-                        .HasColumnName("entity_type_full_name")
                         .HasMaxLength(192);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -631,42 +510,31 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.EntityHistory.EntityChangeSet", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("BrowserInfo")
-                        .HasColumnName("browser_info")
                         .HasMaxLength(512);
 
                     b.Property<string>("ClientIpAddress")
-                        .HasColumnName("client_ip_address")
                         .HasMaxLength(64);
 
                     b.Property<string>("ClientName")
-                        .HasColumnName("client_name")
                         .HasMaxLength(128);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<string>("ExtensionData")
-                        .HasColumnName("extension_data");
+                    b.Property<string>("ExtensionData");
 
-                    b.Property<int?>("ImpersonatorTenantId")
-                        .HasColumnName("impersonator_tenant_id");
+                    b.Property<int?>("ImpersonatorTenantId");
 
-                    b.Property<long?>("ImpersonatorUserId")
-                        .HasColumnName("impersonator_user_id");
+                    b.Property<long?>("ImpersonatorUserId");
 
                     b.Property<string>("Reason")
-                        .HasColumnName("reason")
                         .HasMaxLength(256);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long?>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long?>("UserId");
 
                     b.HasKey("Id");
 
@@ -682,30 +550,23 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.EntityHistory.EntityPropertyChange", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<long>("EntityChangeId")
-                        .HasColumnName("entity_change_id");
+                    b.Property<long>("EntityChangeId");
 
                     b.Property<string>("NewValue")
-                        .HasColumnName("new_value")
                         .HasMaxLength(512);
 
                     b.Property<string>("OriginalValue")
-                        .HasColumnName("original_value")
                         .HasMaxLength(512);
 
                     b.Property<string>("PropertyName")
-                        .HasColumnName("property_name")
                         .HasMaxLength(96);
 
                     b.Property<string>("PropertyTypeFullName")
-                        .HasColumnName("property_type_full_name")
                         .HasMaxLength(192);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -717,32 +578,25 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.IdentityServer4.PersistedGrantEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnName("id")
                         .HasMaxLength(200);
 
                     b.Property<string>("ClientId")
                         .IsRequired()
-                        .HasColumnName("client_id")
                         .HasMaxLength(200);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasColumnName("data")
                         .HasMaxLength(50000);
 
-                    b.Property<DateTime?>("Expiration")
-                        .HasColumnName("expiration");
+                    b.Property<DateTime?>("Expiration");
 
                     b.Property<string>("SubjectId")
-                        .HasColumnName("subject_id")
                         .HasMaxLength(200);
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasColumnName("type")
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
@@ -755,49 +609,36 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Localization.ApplicationLanguage", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasColumnName("display_name")
                         .HasMaxLength(64);
 
                     b.Property<string>("Icon")
-                        .HasColumnName("icon")
                         .HasMaxLength(128);
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<bool>("IsDisabled")
-                        .HasColumnName("is_disabled");
+                    b.Property<bool>("IsDisabled");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(10);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -809,42 +650,32 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Localization.ApplicationLanguageText", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("Key")
                         .IsRequired()
-                        .HasColumnName("key")
                         .HasMaxLength(256);
 
                     b.Property<string>("LanguageName")
                         .IsRequired()
-                        .HasColumnName("language_name")
                         .HasMaxLength(10);
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Source")
                         .IsRequired()
-                        .HasColumnName("source")
                         .HasMaxLength(128);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.Property<string>("Value")
                         .IsRequired()
-                        .HasColumnName("value")
                         .HasMaxLength(67108864);
 
                     b.HasKey("Id");
@@ -857,53 +688,40 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Notifications.NotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("Data")
-                        .HasColumnName("data")
                         .HasMaxLength(1048576);
 
                     b.Property<string>("DataTypeName")
-                        .HasColumnName("data_type_name")
                         .HasMaxLength(512);
 
                     b.Property<string>("EntityId")
-                        .HasColumnName("entity_id")
                         .HasMaxLength(96);
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
-                        .HasColumnName("entity_type_assembly_qualified_name")
                         .HasMaxLength(512);
 
                     b.Property<string>("EntityTypeName")
-                        .HasColumnName("entity_type_name")
                         .HasMaxLength(250);
 
                     b.Property<string>("ExcludedUserIds")
-                        .HasColumnName("excluded_user_ids")
                         .HasMaxLength(131072);
 
                     b.Property<string>("NotificationName")
                         .IsRequired()
-                        .HasColumnName("notification_name")
                         .HasMaxLength(96);
 
-                    b.Property<byte>("Severity")
-                        .HasColumnName("severity");
+                    b.Property<byte>("Severity");
 
                     b.Property<string>("TenantIds")
-                        .HasColumnName("tenant_ids")
                         .HasMaxLength(131072);
 
                     b.Property<string>("UserIds")
-                        .HasColumnName("user_ids")
                         .HasMaxLength(131072);
 
                     b.HasKey("Id");
@@ -914,36 +732,27 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Notifications.NotificationSubscriptionInfo", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("EntityId")
-                        .HasColumnName("entity_id")
                         .HasMaxLength(96);
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
-                        .HasColumnName("entity_type_assembly_qualified_name")
                         .HasMaxLength(512);
 
                     b.Property<string>("EntityTypeName")
-                        .HasColumnName("entity_type_name")
                         .HasMaxLength(250);
 
                     b.Property<string>("NotificationName")
-                        .HasColumnName("notification_name")
                         .HasMaxLength(96);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -957,45 +766,34 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Notifications.TenantNotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
                     b.Property<string>("Data")
-                        .HasColumnName("data")
                         .HasMaxLength(1048576);
 
                     b.Property<string>("DataTypeName")
-                        .HasColumnName("data_type_name")
                         .HasMaxLength(512);
 
                     b.Property<string>("EntityId")
-                        .HasColumnName("entity_id")
                         .HasMaxLength(96);
 
                     b.Property<string>("EntityTypeAssemblyQualifiedName")
-                        .HasColumnName("entity_type_assembly_qualified_name")
                         .HasMaxLength(512);
 
                     b.Property<string>("EntityTypeName")
-                        .HasColumnName("entity_type_name")
                         .HasMaxLength(250);
 
                     b.Property<string>("NotificationName")
                         .IsRequired()
-                        .HasColumnName("notification_name")
                         .HasMaxLength(96);
 
-                    b.Property<byte>("Severity")
-                        .HasColumnName("severity");
+                    b.Property<byte>("Severity");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1007,23 +805,17 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Notifications.UserNotificationInfo", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<int>("State")
-                        .HasColumnName("state");
+                    b.Property<int>("State");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
-                    b.Property<Guid>("TenantNotificationId")
-                        .HasColumnName("tenant_notification_id");
+                    b.Property<Guid>("TenantNotificationId");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
@@ -1035,45 +827,33 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Organizations.OrganizationUnit", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnName("code")
                         .HasMaxLength(95);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasColumnName("display_name")
                         .HasMaxLength(128);
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
-                    b.Property<long?>("ParentId")
-                        .HasColumnName("parent_id");
+                    b.Property<long?>("ParentId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1087,26 +867,19 @@ namespace Research.Migrations
             modelBuilder.Entity("Abp.Organizations.OrganizationUnitRole", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<long>("OrganizationUnitId")
-                        .HasColumnName("organization_unit_id");
+                    b.Property<long>("OrganizationUnitId");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnName("role_id");
+                    b.Property<int>("RoleId");
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1120,58 +893,43 @@ namespace Research.Migrations
             modelBuilder.Entity("Research.Authorization.Roles.Role", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnName("concurrency_stamp")
                         .HasMaxLength(128);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasColumnName("display_name")
                         .HasMaxLength(64);
 
-                    b.Property<bool>("IsDefault")
-                        .HasColumnName("is_default");
+                    b.Property<bool>("IsDefault");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<bool>("IsStatic")
-                        .HasColumnName("is_static");
+                    b.Property<bool>("IsStatic");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(32);
 
                     b.Property<string>("NormalizedName")
                         .IsRequired()
-                        .HasColumnName("normalized_name")
                         .HasMaxLength(32);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.HasKey("Id");
 
@@ -1189,112 +947,83 @@ namespace Research.Migrations
             modelBuilder.Entity("Research.Authorization.Users.User", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnName("access_failed_count");
+                    b.Property<int>("AccessFailedCount");
 
                     b.Property<string>("AuthenticationSource")
-                        .HasColumnName("authentication_source")
                         .HasMaxLength(64);
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnName("concurrency_stamp")
                         .HasMaxLength(128);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
-                        .HasColumnName("email_address")
                         .HasMaxLength(256);
 
                     b.Property<string>("EmailConfirmationCode")
-                        .HasColumnName("email_confirmation_code")
                         .HasMaxLength(328);
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnName("is_active");
+                    b.Property<bool>("IsActive");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<bool>("IsEmailConfirmed")
-                        .HasColumnName("is_email_confirmed");
+                    b.Property<bool>("IsEmailConfirmed");
 
-                    b.Property<bool>("IsLockoutEnabled")
-                        .HasColumnName("is_lockout_enabled");
+                    b.Property<bool>("IsLockoutEnabled");
 
-                    b.Property<bool>("IsPhoneNumberConfirmed")
-                        .HasColumnName("is_phone_number_confirmed");
+                    b.Property<bool>("IsPhoneNumberConfirmed");
 
-                    b.Property<bool>("IsTwoFactorEnabled")
-                        .HasColumnName("is_two_factor_enabled");
+                    b.Property<bool>("IsTwoFactorEnabled");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
-                    b.Property<DateTime?>("LockoutEndDateUtc")
-                        .HasColumnName("lockout_end_date_utc");
+                    b.Property<DateTime?>("LockoutEndDateUtc");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(64);
 
                     b.Property<string>("NormalizedEmailAddress")
                         .IsRequired()
-                        .HasColumnName("normalized_email_address")
                         .HasMaxLength(256);
 
                     b.Property<string>("NormalizedUserName")
                         .IsRequired()
-                        .HasColumnName("normalized_user_name")
                         .HasMaxLength(256);
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnName("password")
                         .HasMaxLength(128);
 
                     b.Property<string>("PasswordResetCode")
-                        .HasColumnName("password_reset_code")
                         .HasMaxLength(328);
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnName("phone_number")
                         .HasMaxLength(32);
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnName("security_stamp")
                         .HasMaxLength(128);
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasColumnName("surname")
                         .HasMaxLength(64);
 
-                    b.Property<int?>("TenantId")
-                        .HasColumnName("tenant_id");
+                    b.Property<int?>("TenantId");
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnName("user_name")
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
@@ -1315,48 +1044,35 @@ namespace Research.Migrations
             modelBuilder.Entity("Research.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ConnectionString")
-                        .HasColumnName("connection_string")
                         .HasMaxLength(1024);
 
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnName("create_time");
+                    b.Property<DateTime>("CreationTime");
 
-                    b.Property<long?>("CreatorUserId")
-                        .HasColumnName("creator_user_id");
+                    b.Property<long?>("CreatorUserId");
 
-                    b.Property<long?>("DeleterUserId")
-                        .HasColumnName("deleter_user_id");
+                    b.Property<long?>("DeleterUserId");
 
-                    b.Property<DateTime?>("DeletionTime")
-                        .HasColumnName("deleted_time");
+                    b.Property<DateTime?>("DeletionTime");
 
-                    b.Property<int?>("EditionId")
-                        .HasColumnName("edition_id");
+                    b.Property<int?>("EditionId");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnName("is_active");
+                    b.Property<bool>("IsActive");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnName("is_deleted");
+                    b.Property<bool>("IsDeleted");
 
-                    b.Property<DateTime?>("LastModificationTime")
-                        .HasColumnName("modified_time");
+                    b.Property<DateTime?>("LastModificationTime");
 
-                    b.Property<long?>("LastModifierUserId")
-                        .HasColumnName("last_modifier_user_id");
+                    b.Property<long?>("LastModifierUserId");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnName("name")
                         .HasMaxLength(128);
 
                     b.Property<string>("TenancyName")
                         .IsRequired()
-                        .HasColumnName("tenancy_name")
                         .HasMaxLength(64);
 
                     b.HasKey("Id");
@@ -1402,8 +1118,7 @@ namespace Research.Migrations
                 {
                     b.HasBaseType("Abp.Authorization.PermissionSetting");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnName("role_id");
+                    b.Property<int>("RoleId");
 
                     b.HasIndex("RoleId");
 
@@ -1416,8 +1131,7 @@ namespace Research.Migrations
                 {
                     b.HasBaseType("Abp.Authorization.PermissionSetting");
 
-                    b.Property<long>("UserId")
-                        .HasColumnName("user_id");
+                    b.Property<long>("UserId");
 
                     b.HasIndex("UserId");
 

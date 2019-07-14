@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Research.Migrations
 {
-    public partial class Init0712 : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -625,17 +625,17 @@ namespace Research.Migrations
                 name: "AbpUserRoles",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
+                    id = table.Column<long>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CreationTime = table.Column<DateTime>(nullable: false),
-                    CreatorUserId = table.Column<long>(nullable: true),
+                    create_time = table.Column<DateTime>(nullable: false),
+                    creator_user_id = table.Column<long>(nullable: true),
                     TenantId = table.Column<int>(nullable: true),
                     UserId = table.Column<long>(nullable: false),
                     RoleId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AbpUserRoles", x => x.Id);
+                    table.PrimaryKey("PK_AbpUserRoles", x => x.id);
                     table.ForeignKey(
                         name: "FK_AbpUserRoles_AbpUsers_UserId",
                         column: x => x.UserId,
