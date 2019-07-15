@@ -2200,3 +2200,250 @@ INFO  2019-07-13 17:20:33,877 [18   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2019-07-13 17:20:33,915 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2019-07-13 17:20:33,922 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Research.Users.UserInfoAppService.GetAll (Research.Application) in 1477.4435ms
 INFO  2019-07-13 17:20:33,923 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1633.6966ms 200 application/json; charset=utf-8
+DEBUG 2019-07-15 09:23:05,270 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-07-15 09:23:05,313 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-07-15 09:23:05,333 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.Web.Host.Startup.ResearchWebHostModule, Research.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchWebCoreModule, Research.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchApplicationModule, Research.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchCoreModule, Research.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,337 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.EntityFrameworkCore.ResearchEntityFrameworkModule, Research.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:05,342 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-07-15 09:23:05,406 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:23:05,406 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:23:05,406 [1    ] o.Configuration.LanguageManagementConfig - Converted Research (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:23:05,406 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:23:05,751 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Research.EntityFrameworkCore.ResearchDbContext, Research.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:23:07,003 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-07-15 09:23:07,115 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-07-15 09:23:07,173 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-07-15 09:23:07,231 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Research
+DEBUG 2019-07-15 09:23:07,279 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-07-15 09:23:07,563 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-07-15 09:23:07,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-07-15 09:23:07,608 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-07-15 09:23:07,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-07-15 09:23:07,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-07-15 09:23:07,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2019-07-15 09:23:07,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.MultiTenancy.Dto.TenantListDto
+DEBUG 2019-07-15 09:23:07,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.CreateUserDto
+DEBUG 2019-07-15 09:23:07,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.UserDto
+DEBUG 2019-07-15 09:23:07,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.CreateUserInput
+DEBUG 2019-07-15 09:23:07,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.UserListDto
+DEBUG 2019-07-15 09:23:07,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.CreateRoleDto
+DEBUG 2019-07-15 09:23:07,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.PermissionDto
+DEBUG 2019-07-15 09:23:07,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.RoleDto
+INFO  2019-07-15 09:23:12,111 [1    ] IdentityServer4.Startup                  - Starting IdentityServer4 version 2.3.2.0
+INFO  2019-07-15 09:23:12,309 [1    ] IdentityServer4.Startup                  - Using the default authentication scheme Identity.Application for IdentityServer
+INFO  2019-07-15 09:23:13,638 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+INFO  2019-07-15 09:23:13,749 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:13,797 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:13,810 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:17,008 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host)
+INFO  2019-07-15 09:23:18,159 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host) - Validation state: Valid
+INFO  2019-07-15 09:23:18,163 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 1.7587ms.
+INFO  2019-07-15 09:23:18,301 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-07-15 09:23:18,312 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host) in 1301.3165ms
+INFO  2019-07-15 09:23:18,375 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4740.3218ms 302 
+INFO  2019-07-15 09:23:18,384 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+INFO  2019-07-15 09:23:18,386 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:18,387 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:18,387 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:18,538 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 153.1305ms 200 text/html
+INFO  2019-07-15 09:23:19,006 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png  
+INFO  2019-07-15 09:23:19,007 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,007 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,007 [4    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,039 [4    ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLO8OC0IU3CT", Request id "0HLO8OC0IU3CT:00000003": the application aborted the connection.
+INFO  2019-07-15 09:23:19,039 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2019-07-15 09:23:19,040 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33.6164ms 0 image/png
+INFO  2019-07-15 09:23:19,101 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+INFO  2019-07-15 09:23:19,107 [11   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,108 [11   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,108 [11   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:19,330 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 228.8505ms 200 application/json;charset=utf-8
+INFO  2019-07-15 09:23:51,040 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/api/services/app/UserInfo/GetAll  
+INFO  2019-07-15 09:23:51,041 [8    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:51,041 [8    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:51,042 [8    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:23:51,087 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "UserInfo"}. Executing action Research.Users.UserInfoAppService.GetAll (Research.Application)
+INFO  2019-07-15 09:23:51,616 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Research.Users.UserInfoAppService.GetAll (Research.Application) with arguments (Research.Users.Dto.PagedUserResultRequestDto) - Validation state: Valid
+INFO  2019-07-15 09:23:52,069 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Research.Users.UserInfoAppService.GetAll (Research.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 452.8508ms.
+INFO  2019-07-15 09:23:52,196 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-07-15 09:23:52,223 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Research.Users.UserInfoAppService.GetAll (Research.Application) in 1136.6928ms
+INFO  2019-07-15 09:23:52,229 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1188.6639ms 200 application/json; charset=utf-8
+INFO  2019-07-15 09:25:03,370 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/.well-known/openid-configuration  
+INFO  2019-07-15 09:25:03,641 [8    ] Server4.Hosting.IdentityServerMiddleware - Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+INFO  2019-07-15 09:25:03,687 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 317.0286ms 200 application/json; charset=UTF-8
+INFO  2019-07-15 09:25:03,786 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/.well-known/openid-configuration/jwks  
+INFO  2019-07-15 09:25:03,791 [8    ] Server4.Hosting.IdentityServerMiddleware - Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+INFO  2019-07-15 09:25:03,811 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 24.7452ms 200 application/jwk-set+json; charset=UTF-8
+INFO  2019-07-15 09:25:04,066 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5000/connect/token application/x-www-form-urlencoded 136
+INFO  2019-07-15 09:25:04,168 [10   ] Server4.Hosting.IdentityServerMiddleware - Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+INFO  2019-07-15 09:25:04,445 [4    ] tIdentity.ResourceOwnerPasswordValidator - Credentials validated for username: admin
+INFO  2019-07-15 09:25:04,511 [15   ] Server4.Validation.TokenRequestValidator - Token request validation success
+{
+  "ClientId": "client",
+  "GrantType": "password",
+  "Scopes": "default-api",
+  "UserName": "admin",
+  "Raw": {
+    "grant_type": "password",
+    "username": "admin",
+    "password": "***REDACTED***",
+    "scope": "default-api",
+    "client_id": "client",
+    "client_secret": "***REDACTED***"
+  }
+}
+INFO  2019-07-15 09:25:04,903 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 836.3574ms 200 application/json; charset=UTF-8
+INFO  2019-07-15 09:25:04,987 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/api/services/app/user/getUsers  
+INFO  2019-07-15 09:25:05,078 [4    ] uthentication.JwtBearer.JwtBearerHandler - Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: 
+kid: 'f542b4cac6cd9beae2cfeeb904ec1fee', 
+token: '{"alg":"RS256","kid":"f542b4cac6cd9beae2cfeeb904ec1fee","typ":"JWT"}.{"nbf":1563153904,"exp":1563157504,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","default-api"],"client_id":"client","sub":"2","auth_time":1563153904,"idp":"local","http://www.aspnetboilerplate.com/identity/claims/tenantId":"1","scope":["default-api"],"amr":["pwd"]}'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters) in C:\agent2\_work\56\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 968
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent2\_work\56\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 718
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+INFO  2019-07-15 09:25:05,081 [4    ] uthentication.JwtBearer.JwtBearerHandler - Bearer was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: 
+kid: 'f542b4cac6cd9beae2cfeeb904ec1fee', 
+token: '{"alg":"RS256","kid":"f542b4cac6cd9beae2cfeeb904ec1fee","typ":"JWT"}.{"nbf":1563153904,"exp":1563157504,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","default-api"],"client_id":"client","sub":"2","auth_time":1563153904,"idp":"local","http://www.aspnetboilerplate.com/identity/claims/tenantId":"1","scope":["default-api"],"amr":["pwd"]}'.
+ERROR 2019-07-15 09:25:07,188 [6    ] uthentication.JwtBearer.JwtBearerHandler - Exception occurred while processing message.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'http://localhost:21021/.well-known/openid-configuration'. ---> System.IO.IOException: IDX20804: Unable to retrieve document from: 'http://localhost:21021/.well-known/openid-configuration'. ---> System.Net.Http.HttpRequestException: 由于目标计算机积极拒绝，无法连接。 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\HttpDocumentRetriever.cs:line 89
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\HttpDocumentRetriever.cs:line 96
+   at Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationRetriever.GetAsync(String address, IDocumentRetriever retriever, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols.OpenIdConnect\Configuration\OpenIdConnectConfigurationRetriever.cs:line 89
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\ConfigurationManager.cs:line 202
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+ERROR 2019-07-15 09:25:07,365 [6    ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLO8OC0IU3D0", Request id "0HLO8OC0IU3D0:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'http://localhost:21021/.well-known/openid-configuration'. ---> System.IO.IOException: IDX20804: Unable to retrieve document from: 'http://localhost:21021/.well-known/openid-configuration'. ---> System.Net.Http.HttpRequestException: 由于目标计算机积极拒绝，无法连接。 ---> System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\HttpDocumentRetriever.cs:line 89
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\HttpDocumentRetriever.cs:line 96
+   at Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationRetriever.GetAsync(String address, IDocumentRetriever retriever, CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols.OpenIdConnect\Configuration\OpenIdConnectConfigurationRetriever.cs:line 89
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Protocols\Configuration\ConfigurationManager.cs:line 202
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServerAuthenticationHandler.cs:line 61
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Research.IdentityServer.JwtTokenMiddleware.<>c__DisplayClass0_0.<<UseJwtTokenMiddleware>b__0>d.MoveNext() in C:\GitHub\github.DGMicro\Hundred-Micro\PropertyTools\IdentityServerDemo2\src\Research.Web.Core\IdentityServer\JwtTokenMiddleware.cs:line 15
+--- End of stack trace from previous location where exception was thrown ---
+   at Research.IdentityServer.JwtTokenMiddleware.<>c__DisplayClass0_0.<<UseJwtTokenMiddleware>b__0>d.MoveNext() in C:\GitHub\github.DGMicro\Hundred-Micro\PropertyTools\IdentityServerDemo2\src\Research.Web.Core\IdentityServer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Abp.AspNetCore.Security.AbpSecurityHeadersMiddleware.Invoke(HttpContext httpContext) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Security\AbpSecurityHeadersMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+INFO  2019-07-15 09:25:07,379 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2392.4053ms 500 
+DEBUG 2019-07-15 09:46:00,160 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-07-15 09:46:00,203 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2019-07-15 09:46:00,228 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.Web.Host.Startup.ResearchWebHostModule, Research.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,231 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchWebCoreModule, Research.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchApplicationModule, Research.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,232 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.ResearchCoreModule, Research.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,233 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,234 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,235 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,236 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Research.EntityFrameworkCore.ResearchEntityFrameworkModule, Research.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,238 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,239 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerEntityFrameworkCoreModule, Abp.ZeroCore.IdentityServer4.EntityFrameworkCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,240 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.IdentityServer4.AbpZeroCoreIdentityServerModule, Abp.ZeroCore.IdentityServer4, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,241 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,242 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.6.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:00,246 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2019-07-15 09:46:00,324 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:46:00,324 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:46:00,324 [1    ] o.Configuration.LanguageManagementConfig - Converted Research (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:46:00,324 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-15 09:46:00,683 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Research.EntityFrameworkCore.ResearchDbContext, Research.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-15 09:46:01,834 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-07-15 09:46:01,937 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-07-15 09:46:01,989 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-07-15 09:46:02,007 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Research
+DEBUG 2019-07-15 09:46:02,038 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-07-15 09:46:02,274 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2019-07-15 09:46:02,320 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 12 classes define auto mapping attributes
+DEBUG 2019-07-15 09:46:02,320 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-07-15 09:46:02,327 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-07-15 09:46:02,328 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-07-15 09:46:02,328 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.MultiTenancy.Dto.CreateTenantInput
+DEBUG 2019-07-15 09:46:02,330 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.MultiTenancy.Dto.TenantListDto
+DEBUG 2019-07-15 09:46:02,330 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.CreateUserDto
+DEBUG 2019-07-15 09:46:02,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.UserDto
+DEBUG 2019-07-15 09:46:02,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.CreateUserInput
+DEBUG 2019-07-15 09:46:02,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Users.Dto.UserListDto
+DEBUG 2019-07-15 09:46:02,331 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.CreateRoleDto
+DEBUG 2019-07-15 09:46:02,332 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.PermissionDto
+DEBUG 2019-07-15 09:46:02,332 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Research.Roles.Dto.RoleDto
+INFO  2019-07-15 09:46:06,574 [1    ] IdentityServer4.Startup                  - Starting IdentityServer4 version 2.3.2.0
+INFO  2019-07-15 09:46:06,806 [1    ] IdentityServer4.Startup                  - Using the default authentication scheme Identity.Application for IdentityServer
+INFO  2019-07-15 09:46:08,665 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+INFO  2019-07-15 09:46:08,785 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:08,833 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:08,847 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:12,879 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host)
+INFO  2019-07-15 09:46:14,008 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host) - Validation state: Valid
+INFO  2019-07-15 09:46:14,014 [5    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 3.4225ms.
+INFO  2019-07-15 09:46:14,218 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2019-07-15 09:46:14,231 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Research.Web.Host.Controllers.HomeController.Index (Research.Web.Host) in 1348.2556ms
+INFO  2019-07-15 09:46:14,313 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5650.0529ms 302 
+INFO  2019-07-15 09:46:14,314 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html  
+INFO  2019-07-15 09:46:14,315 [9    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,315 [9    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,315 [9    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,458 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 143.8838ms 200 text/html
+INFO  2019-07-15 09:46:14,549 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css  
+INFO  2019-07-15 09:46:14,552 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,553 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,553 [5    ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,609 [5    ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLO8OOQ91U8O", Request id "0HLO8OOQ91U8O:00000003": the application aborted the connection.
+INFO  2019-07-15 09:46:14,611 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2019-07-15 09:46:14,611 [5    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.6864ms 0 text/css
+INFO  2019-07-15 09:46:14,926 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+INFO  2019-07-15 09:46:14,928 [10   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,931 [10   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:14,934 [10   ] tion.Cookies.CookieAuthenticationHandler - Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+INFO  2019-07-15 09:46:15,192 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 266.1366ms 200 application/json;charset=utf-8

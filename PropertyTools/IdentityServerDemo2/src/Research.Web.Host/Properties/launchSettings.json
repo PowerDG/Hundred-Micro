@@ -15,7 +15,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IdentityServerDemo.Web.Host": {
+    //"IdentityServerDemo.Web.Host": null,
+    "Research.Web.Host": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5000",
