@@ -177,7 +177,7 @@ namespace Research.PropertyInfoes
 		public async Task<GetPropertyInfoForEditOutput> GetForEdit(NullableIdDto<int> input)
 		{
 			var output = new GetPropertyInfoForEditOutput();
-PropertyInfoEditDto editDto;
+            PropertyInfoEditDto editDto;
 
 			if (input.Id.HasValue)
 			{
@@ -230,7 +230,7 @@ PropertyInfoEditDto editDto;
 			
 
 			entity = await _entityRepository.InsertAsync(entity);
-			return entity.MapTo<PropertyInfoEditDto>();
+			return AutoMapper.Mapper.Map <PropertyInfoEditDto>(entity);
 		}
 
 		/// <summary>
